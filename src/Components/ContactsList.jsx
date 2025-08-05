@@ -3,6 +3,7 @@ import { ContContext } from "../Context/ContactContext";
 
 import styles from "./ContactsList.module.css";
 import ContactItem from "./ContactItem";
+import SearchBox from "./SearchBox";
 
 function ContactsList() {
   const { state, dispatch } = useContext(ContContext);
@@ -17,7 +18,9 @@ function ContactsList() {
         (contact) =>
           contact.name.toLowerCase().includes(search.toLowerCase().trim()) ||
           contact.email.toLowerCase().includes(search.toLowerCase().trim()) ||
-          contact.lastName.toLowerCase().includes(search.toLowerCase().trim()) ||
+          contact.lastName
+            .toLowerCase()
+            .includes(search.toLowerCase().trim()) ||
           contact.phone.includes(search.trim())
       )
     : contacts;
@@ -25,18 +28,13 @@ function ContactsList() {
   return (
     <div className={styles.container}>
       <h3>Contact List</h3>
-      <div className={styles.searchbox}>
-        <p>Search in Contacts:</p>
-        <input
-          type="text"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
-        <button onClick={() => setSelectDlete((s) => !s)}>🗑️</button>
-        {selectDelete ? (
-          <button onClick={() => setChoseDelete((s) => !s)}>✅</button>
-        ) : null}
-      </div>
+      <SearchBox
+        search={search}
+        setSearch={setSearch}
+        setSelectDlete={setSelectDlete}
+        setchoseDelete={setChoseDelete}
+        selectDelete={selectDelete}
+      />
       <ul className={styles.contacts}>
         {filteredContacts.length > 0 ? (
           filteredContacts.map((contact) => (
