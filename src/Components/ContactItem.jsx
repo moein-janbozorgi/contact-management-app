@@ -7,7 +7,7 @@ import ContactChoose from "./ContactChoose";
 function ContactItem({
   contact,
   selectDelete,
-  setchoseDelete,
+  setChoseDelete,
   choseDelete,
   selectedContacts,
   setSelectedContacts,
@@ -84,7 +84,10 @@ function ContactItem({
         />
       ) : null}
       {choseDelete ? (
-        <ContactChoose setchoseDelete={setchoseDelete} selectedContacts={selectedContacts} />
+        <ContactChoose
+          setChoseDelete={setChoseDelete}
+          selectedContacts={selectedContacts}
+        />
       ) : null}
     </>
   );

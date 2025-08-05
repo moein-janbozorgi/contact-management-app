@@ -32,7 +32,7 @@ function ContactsList() {
         search={search}
         setSearch={setSearch}
         setSelectDlete={setSelectDlete}
-        setchoseDelete={setChoseDelete}
+        setChoseDelete={setChoseDelete}
         selectDelete={selectDelete}
       />
       <ul className={styles.contacts}>
@@ -43,7 +43,7 @@ function ContactsList() {
               key={contact.id}
               selectDelete={selectDelete}
               choseDelete={choseDelete}
-              setchoseDelete={setChoseDelete}
+              setChoseDelete={setChoseDelete}
               selectedContacts={selectedContacts}
               setSelectedContacts={setSelectedContacts}
             />

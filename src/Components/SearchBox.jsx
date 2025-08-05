@@ -1,6 +1,12 @@
 import styles from "./SearchBox.module.css";
 
-function SearchBox({ search, setSearch, setSelectDlete, setChoseDelete, selectDelete }) {
+function SearchBox({
+  search,
+  setSearch,
+  setSelectDlete,
+  setChoseDelete,
+  selectDelete,
+}) {
   return (
     <div className={styles.searchbox}>
       <p>Search in Contacts:</p>
