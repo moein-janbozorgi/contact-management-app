@@ -75,5 +75,4 @@ npm run dev
 
 # اطلاعات تماس
 
-شماره همراه 09370952694
 ایمیل : moeinjanb84@gmail.com
