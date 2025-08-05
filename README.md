@@ -37,12 +37,12 @@ npm یا yarn
 
 # نحوه اجرای برنامه :
 
-1️⃣- پروژه را کلون کنید
+1️⃣ پروژه را کلون کنید
 
 git clone https://github.com/moein-janbozorgi/contact-management-app.git
 cd contact-management-app
 
-2️⃣-
+2️⃣
 
 npm install
 
@@ -54,7 +54,7 @@ json-server --watch db.json --port 4000
 
 npm run dev
 
-# نمونه داده db.sjon:
+# نمونه داده db.json:
 
 {
 "contacts": [
